@@ -26,11 +26,11 @@ body {
 
 .slide-in {
     position: relative;
-    transform: translateX(-100%); /* Initially off-screen */
+    transform: translateY(100%); /* Initially off-screen */
     transition: transform 1s ease-out; /* Animation duration and timing function */
 }
 
 /* Show the content after animation */
 .show {
-    transform: translateX(0); /* Move content to its final position */
+    transform: translateY(0); /* Move content to its final position */
 }
