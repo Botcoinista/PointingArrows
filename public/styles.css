@@ -26,7 +26,7 @@ body {
 
 .slide-in {
     position: relative;
-    transform: translateY(100%); /* Initially off-screen */
+    transform: translateY(120%); /* Initially off-screen */
     transition: transform 1s ease-out; /* Animation duration and timing function */
 }
 

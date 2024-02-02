@@ -4,4 +4,3 @@
     content.classList.add('show'); // Add class to trigger animation
     document.body.style.overflow = "auto"; // Restore overflow after animation
 });
-    
