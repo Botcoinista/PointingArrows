@@ -6,50 +6,61 @@
     <title>Pointing Arrows</title>
     <!-- Länka till Tailwind CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+    </style>
 </head>
-<body class="font-sans">
-    <header class="bg-gray-900 text-white py-4 text-center">
-        <h1 class="text-4xl">Pointing Arrows</h1>
+<body class="font-mono font-bold flex flex-col">
+    <header class="bg-black-900 text-white py-4 text-center flex justify-center">
+        <h1 class="text-4xl border-b-2 border-red-500 w-1/2">Pointing Arrows</h1>
     </header>
-    <main class="container mx-auto px-4 py-8 text-center">
-        <section id="music-video" class="mb-8">
-            <h2 class="text-2xl font-bold mb-4">Our Latest Music Video (Yourself)</h2>
-            <div class="aspect-w-16 aspect-h-9 relative">
-                <iframe class="w-full h-full absolute top-0 left-0" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
-                <button id="fullscreenButton" class="absolute top-0 right-0 m-4 bg-blue-500 text-white px-3 py-1 rounded">Fullscreen</button>
+    <main class="container mx-auto px-4 py-8 text-center flex-grow">
+        <section id="music-video" class="mb-8 flex flex-col items-center justify-center">
+            <div class="mb-4">
+                <h2 class="text-2xl font-bold border-b border-red-500">Our Latest Music Video</h2>
+                <h3 class="p-2">Yourself</h3>
             </div>
+            <div class="aspect-w-16 aspect-h-9 max-w-2xl mx-auto lg:max-w-3xl xl:max-w-3xl 2xl:max-w-7xl">
+                <video controls class="w-full h-full cursor-pointer" poster="./images/Cover.JPG">
+                    <source src="https://pointingarrows.s3.eu-north-1.amazonaws.com/Yourself_utkast1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            
         </section>
-        <section id="songs" class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <h2 class="text-2xl font-bold mb-4 col-span-full">Our Songs</h2>
-            <div class="song">
-                <img src="song1.jpg" alt="Song 1" class="w-full mb-2">
-                <h3 class="text-xl font-semibold mb-2">Yourself</h3>
-                <audio controls class="w-full">
-                    <source src="song1.mp3" type="audio/mpeg">
-                    Your browser does not support the audio element.
-                </audio>
+        <section id="songs" class="mb-8">
+            <div class="text-center mb-4">
+                <h2 class="text-2xl font-bold border-b border-red-500 inline-block mb-4">Our Songs</h2>
             </div>
-            <div class="song">
-                <img src="song1.jpg" alt="Song 1" class="w-full mb-2">
-                <h3 class="text-xl font-semibold mb-2">Sire</h3>
-                <audio controls class="w-full">
-                    <source src="song1.mp3" type="audio/mpeg">
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
-            <div class="song">
-                <img src="song1.jpg" alt="Song 1" class="w-full mb-2">
-                <h3 class="text-xl font-semibold mb-2">Untoucheble</h3>
-                <audio controls class="w-full">
-                    <source src="song1.mp3" type="audio/mpeg">
-                    Your browser does not support the audio element.
-                </audio>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="song">
+                    <h3 class="text-xl font-medium mb-2">Yourself</h3>
+                    <audio controls class="w-full">
+                        <source src="https://pointingarrows.s3.eu-north-1.amazonaws.com/Yourself.wav">                        
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+                <div class="song">
+                    <h3 class="text-xl font-medium mb-2">Sire</h3>
+                    <audio controls class="w-full">
+                        <source src="https://pointingarrows.s3.eu-north-1.amazonaws.com/Sire.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+                <div class="song">
+                    <h3 class="text-xl font-medium mb-2">Untouchable</h3>
+                    <audio controls class="w-full">
+                        <source src="https://pointingarrows.s3.eu-north-1.amazonaws.com/Untouchable.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
             </div>
         </section>
     </main>
-    <footer class="bg-gray-900 text-white py-4 text-center">
+    
+    <footer class="bg-red-500 text-white py-4 text-center">
         <p>&copy; 2024 Pointing Arrows</p>
     </footer>
-    <script src="script.js"></script>
 </body>
 </html>
